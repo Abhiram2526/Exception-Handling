@@ -15,14 +15,10 @@ public class Bank extends Exception {
 	public static void main(String[] args) {
 		try(Scanner s=new Scanner(System.in)){
 			
-				System.out.print("ENter the Pin_Number =>");
-				int Pin_No=s.nextInt();
-				if(!(Pin_No>=1111 && Pin_No<=9999)) {
-					throw new Bank("Invalid Pin_No");
-				}
+				
 				Pin_Check pc=new Pin_Check();
-				pc.verify(Pin_No);
-				System.out.print("Enter the Choice =>");
+				pc.verify();
+				System.out.println("Enter the Choice ");
 				System.out.println("1. Widrawal \n2. Payment\n3. Deposite ");
 				int choice=s.nextInt();
 				switch(choice) {
@@ -68,7 +64,7 @@ public class Bank extends Exception {
 			
 			
 		}
-		catch(Bank | Pin_Check | WithDraw | Deposite | Payment B) {
+		catch(Bank | Pin_Check | WithDraw | Payment B) {
 			System.out.println(B.getMessage());
 		}
 		catch(InputMismatchException ime) {

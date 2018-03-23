@@ -19,7 +19,7 @@ public class Payment extends Exception {
 			}
 			else {
 				System.out .println("Amount Deposite="+amt);
-				x.bal=x.bal+amt;
+				x.bal=x.bal-amt;
 				x.display();
 				System.out .println("Transection Completed");
 			}
